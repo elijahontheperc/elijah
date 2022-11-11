@@ -2,7 +2,7 @@
 
 int main() {
     float orng,apl,pr,bud; 
-    char item;
+    char item, ch =156;
 
     printf("*** ITEM PROFILES ***\n");
     printf("A: Apple\n");
@@ -12,11 +12,11 @@ int main() {
 
 
     printf("*** SHOPKEEPER PANEL***\n");
-    printf("Please enter apple price: $");
+    printf("Please enter apple price:%c",ch);
     scanf("%f",&apl);
-    printf("Please enter orange price: $");
+    printf("Please enter orange price:%c",ch);
     scanf("%f",&orng);
-    printf("Please enter pear price: $");
+    printf("Please enter pear price:%c",ch);
     scanf("%f",&pr);
     printf("***********************\n\n");
 
@@ -27,14 +27,14 @@ int main() {
 
     printf("*** ITEM MENU ***\n");
     printf("Item Prices\n");
-    printf("A: £%0.2f\n",apl);
-    printf("O: £%0.2f\n",orng);
-    printf("P: £%0.2f\n",pr);
+    printf("A: %c %0.2f\n",apl,ch);
+    printf("O: %c %0.2f\n",orng,ch);
+    printf("P: %c %0.2f\n",pr,ch);
     printf("*****************\n\n");
 
 
     printf("*** CUSTOMER PANEL ***\n");
-    printf("Please state your budget: $",bud);
+    printf("Please state your budget:%c",bud,ch);
     scanf("%f", &bud);
     printf("**********************\n\n");
 
@@ -51,7 +51,7 @@ int main() {
             printf("Apple purchased!\n");
             bud-= apl;
             printf("****Remaining budget****\n");
-            printf("Remaining budget: %.2f\n", bud);
+            printf("Remaining budget: %c %.2f\n", bud,ch);
             printf("Thanks for shopping with us!");
            }
            else 
@@ -67,7 +67,7 @@ int main() {
             printf("Orange purchased!\n");  
             bud-= orng;
             printf("****Remaining budget****\n");
-            printf("Remaining budget: %.2f\n", bud);
+            printf("Remaining budget: %c %.2f\n", bud,ch);
             printf("Thanks for shopping with us!");
            }
            else
@@ -82,7 +82,7 @@ int main() {
            {
             printf("Pear purchased!\n");
             bud-= pr;
-            printf("remaining budget: %.2f", bud);
+            printf("remaining budget: %c %.2f", bud,ch);
            }
            else
            {
